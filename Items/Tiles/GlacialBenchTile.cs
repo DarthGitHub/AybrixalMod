@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace AybrixalMod.Items.Tiles
 {
-    public class  GlacialBenchTile : ModTile
+    public class GlacialBenchTile : ModTile
     {
         public override void SetDefaults()
         {
@@ -14,7 +14,7 @@ namespace AybrixalMod.Items.Tiles
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileTable[Type] = true;
-            Main.tileLavaDeath[Type] = true;
+            Main.tileLavaDeath[Type] = false;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Glacial Bench");
