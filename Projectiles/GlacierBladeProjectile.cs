@@ -4,30 +4,31 @@ using Terraria.ModLoader;
 
 namespace AybrixalMod.Projectiles
 {
-	
-	public class GlacierBladeProjectile : ModProjectile
-	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Glacier Blade Projectile");
-		}
-		
-		public override void SetDefaults()
-		{
-			projectile.width = 24;
-			projectile.height = 30;
-			projectile.friendly = true;
-			projectile.melee = true;
-			projectile.tileCollide = true;
-			projectile.penetrate = 3;
-			projectile.timeLeft = 1600;
-			projectile.light = 1.25f;
-			projectile.extraUpdates = 1;
-			projectile.ignoreWater = true;
-		}
-		public override void AI()
-		{
-			projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
-		}
-	}
+    public class GlacierBladeProjectile : ModProjectile
+    {
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Glacier Blade Projectile");
+        }
+        public override void SetDefaults()
+        {
+            projectile.width = 10;
+            projectile.height = 10;
+            projectile.aiStyle = 1;
+            projectile.friendly = true;
+            projectile.hostile = false;
+            projectile.melee = true;
+            projectile.penetrate = 5;
+            projectile.timeLeft = 6000;
+            projectile.light = 0.9f;
+            projectile.ignoreWater = true;
+            projectile.tileCollide = true;
+            projectile.extraUpdates = 1;
+            aiType = ProjectileID.TerraBeam;
+
+        }
+
+    }
+
 }
